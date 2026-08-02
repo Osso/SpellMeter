@@ -1,0 +1,10 @@
+## Interface: 120007
+## Title: SpellMeter
+## Notes: Persistent live per-spell DPS and HPS from Blizzard's Damage Meter
+## Author: Alessio Deiana
+## Version: 0.1.0
+## SavedVariables: SpellMeterDB
+
+SpellMeterModel.lua
+SpellMeterRows.lua
+SpellMeter.lua
