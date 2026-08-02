@@ -59,7 +59,10 @@ test("rows preserve Blizzard order and pass secret values directly to UI sinks",
         local row = { shown = false }
         row.icon = { SetTexture = function(_, value) row.texture = value end }
         row.name = { SetText = function(_, value) row.label = value end }
-        row.value = { SetText = function(_, value) row.display_value = value end }
+        row.value = {
+            SetText = function(_, value) row.display_value = value end,
+            SetFormattedText = function(_, _, value) row.display_value = value end,
+        }
         row.bar = {
             SetMinMaxValues = function(_, minimum, maximum_value)
                 row.minimum = minimum
@@ -84,6 +87,33 @@ test("rows preserve Blizzard order and pass secret values directly to UI sinks",
     assert_equal(rows[1].bar_value, spells[1].totalAmount)
     assert_equal(rows[2].display_value, amount_two)
     assert_equal(rows[3].shown, false)
+end)
+
+test("per-second values render with zero decimal places", function()
+    local Rows = require("SpellMeterRows")
+    local row = { shown = false }
+    row.icon = { SetTexture = function() end }
+    row.name = { SetText = function() end }
+    row.value = {
+        SetText = function(_, value)
+            row.rendered_value = tostring(value)
+        end,
+        SetFormattedText = function(_, format, value)
+            row.rendered_value = string.format(format, value)
+        end,
+    }
+    row.bar = {
+        SetMinMaxValues = function() end,
+        SetValue = function() end,
+    }
+    function row:SetShown(value) self.shown = value end
+
+    Rows.apply({ row }, { { spellID = 101, amountPerSecond = 123.6, totalAmount = 500 } }, 500, {
+        spell_name = function() return "Test Spell" end,
+        spell_texture = function() return 1010 end,
+    })
+
+    assert_equal(row.rendered_value, "124")
 end)
 
 print("All SpellMeter tests passed")

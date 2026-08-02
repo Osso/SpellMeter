@@ -9,7 +9,7 @@ function Rows.apply(rows, combatSpells, maxAmount, api)
             local spellID = combatSpell.spellID
             row.icon:SetTexture(api.spell_texture(spellID))
             row.name:SetText(api.spell_name(spellID))
-            row.value:SetText(combatSpell.amountPerSecond)
+            row.value:SetFormattedText("%.0f", combatSpell.amountPerSecond)
             row.bar:SetMinMaxValues(0, maxAmount)
             row.bar:SetValue(combatSpell.totalAmount)
             row:SetShown(true)
