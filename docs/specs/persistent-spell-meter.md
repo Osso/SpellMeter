@@ -26,7 +26,8 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 
 ## Tests asserting this spec
 
-- `tests/run.lua`
+- `unit/run.lua`
+- `tests/smoke.lua`
 - `run-tests.sh`
 
 ## Known gaps (current cycle)

@@ -1,5 +1,5 @@
 #!/bin/sh
 set -eu
 
-lua tests/run.lua
+lua unit/run.lua
 luac -p SpellMeterModel.lua SpellMeterRows.lua SpellMeter.lua

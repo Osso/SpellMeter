@@ -1,0 +1,18 @@
+test("persistent meter window loads", function()
+    assertNotNil(SpellMeterFrame)
+    assertTrue(SpellMeterFrame:IsShown())
+    assertEquals("Spell DPS", SpellMeterFrame.title:GetText())
+end)
+
+test("mode button switches the persistent window to HPS", function()
+    SpellMeterFrame.modeButton:Click()
+    assertEquals("Spell HPS", SpellMeterFrame.title:GetText())
+    assertEquals("DPS", SpellMeterFrame.modeButton:GetText())
+end)
+
+test("slash command hides and restores the persistent window", function()
+    SlashCmdList.SPELLMETER()
+    assertFalse(SpellMeterFrame:IsShown())
+    SlashCmdList.SPELLMETER()
+    assertTrue(SpellMeterFrame:IsShown())
+end)
