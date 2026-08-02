@@ -37,6 +37,13 @@ test("spell labels render above their status bars", function()
     assertEquals(spellRow.bar, spellRow.name:GetParent())
 end)
 
+test("spell icons render in front of their status bars", function()
+    local spellRow = firstSpellRow()
+    assertNotNil(spellRow)
+    assertTrue(spellRow.icon:GetParent():GetFrameLevel() > spellRow.bar:GetFrameLevel())
+    assertFalse(spellRow.icon:IsDesaturated())
+end)
+
 async_test("combat session updates refresh the visible spell rows", function(done)
     local rows = spellRows()
     assertEquals(10, #rows)

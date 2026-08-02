@@ -39,9 +39,15 @@ local function createRow(parent, index)
     background:SetAllPoints()
     background:SetColorTexture(0.08, 0.08, 0.08, 0.88)
 
-    row.icon = row.bar:CreateTexture(nil, "ARTWORK")
-    row.icon:SetSize(18, 18)
-    row.icon:SetPoint("LEFT", 1, 0)
+    row.iconFrame = CreateFrame("Frame", nil, row)
+    row.iconFrame:SetSize(18, 18)
+    row.iconFrame:SetPoint("LEFT", 1, 0)
+    row.iconFrame:SetFrameLevel(row.bar:GetFrameLevel() + 1)
+
+    row.icon = row.iconFrame:CreateTexture(nil, "ARTWORK")
+    row.icon:SetAllPoints()
+    row.icon:SetTexCoord(0.0625, 0.9, 0.0626, 0.9)
+    row.icon:SetDesaturated(false)
 
     row.name = row.bar:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     row.name:SetPoint("LEFT", row.icon, "RIGHT", 5, 0)
