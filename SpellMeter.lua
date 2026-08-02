@@ -180,6 +180,7 @@ local eventFrame = CreateFrame("Frame")
 eventFrame:RegisterEvent("ADDON_LOADED")
 eventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
 eventFrame:RegisterEvent("DAMAGE_METER_CURRENT_SESSION_UPDATED")
+eventFrame:RegisterEvent("DAMAGE_METER_COMBAT_SESSION_UPDATED")
 eventFrame:RegisterEvent("DAMAGE_METER_RESET")
 eventFrame:SetScript("OnEvent", function(_, event, argument)
     if event == "ADDON_LOADED" then
