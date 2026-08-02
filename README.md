@@ -5,7 +5,7 @@ SpellMeter keeps World of Warcraft Retail's live per-spell DPS or HPS breakdown 
 ## Features
 
 - Persistent ordered spell bars for the current player's combat session
-- Spell icon, name, and per-second value rendered over each bar
+- Spell icon, name, and whole-number per-second value rendered over each bar
 - DPS/HPS mode switch
 - Blizzard-provided per-second values refreshed during live combat updates
 - Saved window position, visibility, and selected mode
@@ -36,7 +36,7 @@ Reload WoW with `/reload` after installation.
 
 ## Limitations
 
-Retail marks live combat-meter values secret during combat. SpellMeter displays Blizzard's values directly but cannot calculate a custom rolling five-second window, reformat those values, or sort them numerically. Rows retain Blizzard's order; they are not independently ranked by SpellMeter.
+Retail marks live combat-meter values secret during combat. SpellMeter displays Blizzard's values directly, rounds only the displayed per-second value to a whole number, and cannot calculate a custom rolling five-second window or sort rows numerically. Rows retain Blizzard's order; they are not independently ranked by SpellMeter.
 
 ## Development
 
