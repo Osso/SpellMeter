@@ -8,6 +8,7 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - [x] Preserve Blizzard's spell order.
 - [x] Pass secret per-second and total values directly to supported UI sinks without arithmetic.
 - [x] Display each per-second DPS/HPS value rounded to zero decimal places.
+- [x] Render each spell icon above its meter bar without desaturation.
 - [x] Preserve valid saved mode, position, and visibility settings while replacing invalid values.
 - [x] Refresh the visible window from current-player combat-session updates.
 - [ ] Remain visible until the user closes or toggles it.
