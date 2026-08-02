@@ -8,7 +8,7 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - [x] Preserve Blizzard's spell order.
 - [x] Pass secret per-second and total values directly to supported UI sinks without arithmetic.
 - [x] Preserve valid saved mode, position, and visibility settings while replacing invalid values.
-- [ ] Refresh the visible window from the current player combat session.
+- [x] Refresh the visible window from current-player combat-session updates.
 - [ ] Remain visible until the user closes or toggles it.
 - [ ] Restore its saved screen position after reload.
 
@@ -32,7 +32,7 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 
 ## Known gaps (current cycle)
 
-- [ ] Prove addon loading and persistent rendering in a simulator or live Retail client.
+- [x] Prove addon loading and persistent rendering in a simulator or live Retail client.
 
 ## Out of scope
 

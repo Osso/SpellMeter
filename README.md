@@ -7,7 +7,7 @@ SpellMeter keeps World of Warcraft Retail's live per-spell DPS or HPS breakdown 
 - Persistent ordered spell bars for the current player's combat session
 - Spell icon, name, and per-second value rendered over each bar
 - DPS/HPS mode switch
-- Blizzard-provided per-second values
+- Blizzard-provided per-second values refreshed during live combat updates
 - Saved window position, visibility, and selected mode
 - `/spellmeter` toggles the window
 
