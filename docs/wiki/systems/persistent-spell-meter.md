@@ -1,6 +1,6 @@
 # Persistent spell meter runtime
 
-SpellMeter requests the local player's current-session spell data from `C_DamageMeter.GetCombatSessionSourceFromType`. Damage mode uses `Enum.DamageMeterType.Dps`; healing mode uses `Enum.DamageMeterType.Hps`. The window renders the first ten entries in Blizzard's returned order.
+SpellMeter requests the local player's current-session spell data from `C_DamageMeter.GetCombatSessionSourceFromType`. Damage mode uses `Enum.DamageMeterType.Dps`; healing mode uses `Enum.DamageMeterType.Hps`. The window renders the first ten entries in Blizzard's returned order, with each row's icon, spell name, and per-second value visible over its meter bar.
 
 During combat, Blizzard marks returned values secret. `SpellMeterRows.lua` therefore preserves API order and sends values directly to `FontString` and `StatusBar` methods. It never compares, formats, sorts, or performs arithmetic on spell amounts.
 
