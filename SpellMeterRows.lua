@@ -7,6 +7,7 @@ function Rows.apply(rows, combatSpells, maxAmount, api)
         local combatSpell = combatSpells[index]
         if combatSpell then
             local spellID = combatSpell.spellID
+            row.spellID = spellID
             row.icon:SetTexture(api.spell_texture(spellID))
             row.name:SetText(api.spell_name(spellID))
             row.value:SetFormattedText("%.0f", combatSpell.amountPerSecond)
@@ -14,6 +15,8 @@ function Rows.apply(rows, combatSpells, maxAmount, api)
             row.bar:SetValue(combatSpell.totalAmount)
             row:SetShown(true)
         else
+            row.spellID = nil
+            row.icon:SetTexture(nil)
             row:SetShown(false)
         end
     end

@@ -80,12 +80,14 @@ test("rows preserve Blizzard order and pass secret values directly to UI sinks",
         spell_texture = function(id) return id * 10 end,
     })
 
+    assert_equal(rows[1].spellID, 101)
     assert_equal(rows[1].label, "Spell 101")
     assert_equal(rows[1].texture, 1010)
     assert_equal(rows[1].display_value, amount_one)
     assert_equal(rows[1].maximum, maximum)
     assert_equal(rows[1].bar_value, spells[1].totalAmount)
     assert_equal(rows[2].display_value, amount_two)
+    assert_equal(rows[3].spellID, nil)
     assert_equal(rows[3].shown, false)
 end)
 

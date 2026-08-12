@@ -44,6 +44,26 @@ test("spell icons render in front of their status bars", function()
     assertFalse(spellRow.icon:IsDesaturated())
 end)
 
+test("spell icon hover shows and hides its spell tooltip", function()
+    local spellRow = firstSpellRow()
+    assertNotNil(spellRow)
+    spellRow.spellID = 116
+
+    local onEnter = spellRow.iconFrame:GetScript("OnEnter")
+    assertNotNil(onEnter)
+    onEnter(spellRow.iconFrame)
+
+    local tooltip = GetAppropriateTooltip()
+    assertTrue(tooltip:IsShown())
+    local _, tooltipSpellID = tooltip:GetSpell()
+    assertEquals(116, tooltipSpellID)
+
+    local onLeave = spellRow.iconFrame:GetScript("OnLeave")
+    assertNotNil(onLeave)
+    onLeave(spellRow.iconFrame)
+    assertFalse(tooltip:IsShown())
+end)
+
 async_test("combat session updates refresh the visible spell rows", function(done)
     local rows = spellRows()
     assertEquals(10, #rows)

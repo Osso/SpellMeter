@@ -24,6 +24,21 @@ local rowApi = {
     spell_texture = spellTexture,
 }
 
+local function showSpellTooltip(row)
+    if not row.spellID then
+        return
+    end
+
+    local tooltip = GetAppropriateTooltip()
+    GameTooltip_SetDefaultAnchor(tooltip, row.iconFrame)
+    tooltip:SetSpellByID(row.spellID, false)
+    tooltip:Show()
+end
+
+local function hideSpellTooltip()
+    GetAppropriateTooltip():Hide()
+end
+
 local function createRow(parent, index)
     local row = CreateFrame("Frame", nil, parent)
     row:SetHeight(ROW_HEIGHT - 2)
@@ -43,6 +58,12 @@ local function createRow(parent, index)
     row.iconFrame:SetSize(18, 18)
     row.iconFrame:SetPoint("LEFT", 1, 0)
     row.iconFrame:SetFrameLevel(row.bar:GetFrameLevel() + 1)
+    row.iconFrame:EnableMouse(true)
+    row.iconFrame:EnableMouseMotion(true)
+    row.iconFrame:SetScript("OnEnter", function()
+        showSpellTooltip(row)
+    end)
+    row.iconFrame:SetScript("OnLeave", hideSpellTooltip)
 
     row.icon = row.iconFrame:CreateTexture(nil, "ARTWORK")
     row.icon:SetAllPoints()
@@ -82,6 +103,8 @@ end
 
 local function clearRows(message)
     for index, row in ipairs(rows) do
+        row.spellID = nil
+        row.icon:SetTexture(nil)
         row:SetShown(index == 1)
     end
     rows[1].icon:SetTexture(nil)
