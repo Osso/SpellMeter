@@ -21,7 +21,7 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 
 ## Implementation inventory
 
-- `SpellMeter.lua` — window, events, Blizzard API integration, and saved state.
+- `SpellMeter.lua` — window, events, Blizzard API integration, tooltip forwarding, and saved state.
 - `SpellMeterModel.lua` — mode and settings behavior.
 - `SpellMeterRows.lua` — secret-safe row binding.
 - `SpellMeter.toc` — Retail addon manifest.

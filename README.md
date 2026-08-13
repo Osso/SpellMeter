@@ -38,7 +38,7 @@ Reload WoW with `/reload` after installation.
 
 ## Limitations
 
-Retail marks live combat-meter values secret during combat. SpellMeter displays Blizzard's values directly, rounds only the displayed per-second value to a whole number, and cannot calculate a custom rolling five-second window or sort rows numerically. Rows retain Blizzard's order; they are not independently ranked by SpellMeter.
+Retail marks live combat-meter values and spell IDs secret during combat. SpellMeter forwards those values directly to Blizzard UI sinks and tooltip APIs without inspecting, comparing, or converting them. It rounds only the displayed per-second value to a whole number, cannot calculate a custom rolling five-second window, and cannot sort rows numerically. Rows retain Blizzard's order; they are not independently ranked by SpellMeter.
 
 ## Development
 
