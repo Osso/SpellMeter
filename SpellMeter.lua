@@ -25,10 +25,6 @@ local rowApi = {
 }
 
 local function showSpellTooltip(row)
-    if not row.spellID then
-        return
-    end
-
     local tooltip = GetAppropriateTooltip()
     GameTooltip_SetDefaultAnchor(tooltip, row.iconFrame)
     tooltip:SetSpellByID(row.spellID, false)
