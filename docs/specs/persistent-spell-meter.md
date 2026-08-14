@@ -37,14 +37,24 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - `tests/smoke.lua`
 - `run-tests.sh`
 
+## CurseForge publication status
+
+- Project ID: `1651789`, created under `ossoleil`.
+- License: MIT.
+- Third-party distribution: enabled.
+- Source: public GitHub repository `Osso/SpellMeter`; automatic packaging is limited to tagged commits.
+- GitHub push webhook: ID `665556362`, active; query parameters are intentionally redacted.
+- Project state: new and unapproved; no file has been submitted yet.
+- Remaining work: create the tag-triggered 0.1.0 package, then complete CurseForge moderation and file verification.
+
 ## Known gaps (current cycle)
 
 CurseForge token provisioning is complete; the secret value is not recorded here.
 
 - [x] Prove addon loading and persistent rendering in a simulator or live Retail client.
-- [ ] Create the CurseForge project and record its project ID.
-- [ ] Configure and verify the GitHub packaging webhook.
-- [ ] Publish and verify the CurseForge 0.1.0 package.
+- [x] Create the CurseForge project and record its project ID.
+- [x] Configure the GitHub push packaging webhook.
+- [ ] Create the tag-triggered CurseForge 0.1.0 package and complete moderation/file verification.
 
 ## Out of scope
 

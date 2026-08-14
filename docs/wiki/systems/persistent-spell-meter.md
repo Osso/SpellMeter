@@ -13,6 +13,10 @@ The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtim
 ## CurseForge publication status
 
 - Upload API token: provisioned through the protected local credentials path; its value is not recorded here.
-- Project ID: not yet recorded; project creation remains outstanding.
-- GitHub packaging webhook: not yet configured or verified.
-- CurseForge 0.1.0 publication: not yet submitted or verified.
+- Project ID: `1651789`, created under `ossoleil`.
+- License: MIT.
+- Third-party distribution: enabled.
+- Source: public GitHub repository `Osso/SpellMeter`; automatic packaging is limited to tagged commits.
+- GitHub push packaging webhook: ID `665556362`, active; query parameters are intentionally redacted.
+- Project state: new and unapproved; no file has been submitted yet.
+- Remaining work: create the tag-triggered 0.1.0 package, then complete CurseForge moderation and file verification.
