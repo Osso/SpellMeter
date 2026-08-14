@@ -27,6 +27,8 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - `SpellMeter.toc` — Retail addon manifest.
 - `.pkgmeta` — CurseForge package name, runtime-file exclusions, manual changelog, and no-library package setting.
 - `CHANGELOG.md` — Markdown release notes for the published package.
+- `LICENSE` — MIT license for the project.
+- `assets/curseforge-logo.png` — CurseForge project artwork, excluded from the addon archive.
 - `deploy.sh` — local AddOns installation.
 
 ## Tests asserting this spec
@@ -37,7 +39,12 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 
 ## Known gaps (current cycle)
 
+CurseForge token provisioning is complete; the secret value is not recorded here.
+
 - [x] Prove addon loading and persistent rendering in a simulator or live Retail client.
+- [ ] Create the CurseForge project and record its project ID.
+- [ ] Configure and verify the GitHub packaging webhook.
+- [ ] Publish and verify the CurseForge 0.1.0 package.
 
 ## Out of scope
 

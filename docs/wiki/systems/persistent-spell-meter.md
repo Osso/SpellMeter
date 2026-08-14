@@ -8,4 +8,11 @@ The window refreshes on `PLAYER_ENTERING_WORLD`, `DAMAGE_METER_CURRENT_SESSION_U
 
 ## CurseForge packaging
 
-The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtime files listed by `SpellMeter.toc`, excludes repository-only documentation, tests, unit fixtures, and scripts, and disables no-library package creation because the addon has no externals. `CHANGELOG.md` is supplied as the Markdown manual changelog.
+The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtime files listed by `SpellMeter.toc`, excludes repository-only documentation, project artwork, tests, unit fixtures, and scripts, and disables no-library package creation because the addon has no externals. `CHANGELOG.md` is supplied as the Markdown manual changelog. The project is licensed under MIT (`LICENSE`), and `assets/curseforge-logo.png` is the CurseForge project artwork excluded from the addon archive.
+
+## CurseForge publication status
+
+- Upload API token: provisioned through the protected local credentials path; its value is not recorded here.
+- Project ID: not yet recorded; project creation remains outstanding.
+- GitHub packaging webhook: not yet configured or verified.
+- CurseForge 0.1.0 publication: not yet submitted or verified.
