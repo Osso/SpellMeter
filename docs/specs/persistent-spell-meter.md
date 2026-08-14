@@ -43,9 +43,12 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - License: MIT.
 - Third-party distribution: enabled.
 - Source: public GitHub repository `Osso/SpellMeter`; automatic packaging is limited to tagged commits.
-- GitHub push webhook: ID `665556362`, active; query parameters are intentionally redacted.
-- Project state: new and unapproved; no file has been submitted yet.
-- Remaining work: create the tag-triggered 0.1.0 package, then complete CurseForge moderation and file verification.
+- Release tag: `0.1.0` at commit `e609f02031d73021457aaa799e707ef0f44510fc`.
+- GitHub push webhook: ID `665556362`, active; tag delivery succeeded; query parameters are intentionally redacted.
+- CurseForge builds `345260` and `345261` completed.
+- CurseForge file `8644762` is release `0.1.0` for game version `12.0.7` and is **Under Review**.
+- Downloaded package verification: `3,478` bytes, SHA-256 `2dd10ee561dd45143ebcfc7140bd3e6139679435d9878a48f0c63ef0163ef0fb`; exactly four runtime files, each byte-identical to source.
+- Submission and package verification are complete. CurseForge moderation/public approval remains pending.
 
 ## Known gaps (current cycle)
 
@@ -53,8 +56,9 @@ CurseForge token provisioning is complete; the secret value is not recorded here
 
 - [x] Prove addon loading and persistent rendering in a simulator or live Retail client.
 - [x] Create the CurseForge project and record its project ID.
-- [x] Configure the GitHub push packaging webhook.
-- [ ] Create the tag-triggered CurseForge 0.1.0 package and complete moderation/file verification.
+- [x] Configure and verify the GitHub push packaging webhook.
+- [x] Submit and verify the tagged CurseForge 0.1.0 package.
+- [ ] Complete CurseForge moderation and public approval.
 
 ## Out of scope
 
