@@ -28,7 +28,7 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - `.pkgmeta` — CurseForge package name, runtime-file exclusions, manual changelog, and no-library package setting.
 - `CHANGELOG.md` — Markdown release notes for the published package.
 - `LICENSE` — MIT license for the project.
-- `assets/curseforge-logo.png` — CurseForge project artwork, excluded from the addon archive.
+- `assets/curseforge-logo.png` — stylized DPS-bar CurseForge icon, excluded from the addon archive.
 - `deploy.sh` — local AddOns installation.
 
 ## Tests asserting this spec
@@ -48,6 +48,7 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - CurseForge builds `345260` and `345261` completed.
 - CurseForge file `8644762` is release `0.1.0` for game version `12.0.7` and is **Under Review**.
 - Downloaded package verification: `3,478` bytes, SHA-256 `2dd10ee561dd45143ebcfc7140bd3e6139679435d9878a48f0c63ef0163ef0fb`; exactly four runtime files, each byte-identical to source.
+- Project presentation uses the DPS-bar icon and includes `SpellMeter-DPS.png` in the media gallery.
 - Submission and package verification are complete. CurseForge moderation/public approval remains pending.
 
 ## Known gaps (current cycle)

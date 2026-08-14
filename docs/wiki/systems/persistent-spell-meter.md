@@ -8,7 +8,7 @@ The window refreshes on `PLAYER_ENTERING_WORLD`, `DAMAGE_METER_CURRENT_SESSION_U
 
 ## CurseForge packaging
 
-The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtime files listed by `SpellMeter.toc`, excludes repository-only documentation, project artwork, tests, unit fixtures, and scripts, and disables no-library package creation because the addon has no externals. `CHANGELOG.md` is supplied as the Markdown manual changelog. The project is licensed under MIT (`LICENSE`), and `assets/curseforge-logo.png` is the CurseForge project artwork excluded from the addon archive.
+The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtime files listed by `SpellMeter.toc`, excludes repository-only documentation, project artwork, tests, unit fixtures, and scripts, and disables no-library package creation because the addon has no externals. `CHANGELOG.md` is supplied as the Markdown manual changelog. The project is licensed under MIT (`LICENSE`), and `assets/curseforge-logo.png` is the stylized DPS-bar CurseForge icon excluded from the addon archive.
 
 ## CurseForge publication status
 
@@ -22,4 +22,5 @@ The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtim
 - CurseForge builds `345260` and `345261` completed.
 - CurseForge file `8644762` is release `0.1.0` for game version `12.0.7` and is **Under Review**.
 - Downloaded package verification: `3,478` bytes, SHA-256 `2dd10ee561dd45143ebcfc7140bd3e6139679435d9878a48f0c63ef0163ef0fb`; exactly four runtime files, each byte-identical to source.
+- Project presentation uses the DPS-bar icon and includes `SpellMeter-DPS.png` in the media gallery.
 - Submission and package verification are complete. CurseForge moderation/public approval remains pending.

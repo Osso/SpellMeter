@@ -42,7 +42,7 @@ Retail marks live combat-meter values and spell IDs secret during combat. SpellM
 
 ## CurseForge packaging
 
-The root `.pkgmeta` packages the addon as `SpellMeter` with only the four runtime files from `SpellMeter.toc`. It excludes repository documentation, project artwork, tests, unit fixtures, and local scripts. `CHANGELOG.md` is the Markdown manual changelog; no external libraries are bundled. CurseForge project artwork lives at `assets/curseforge-logo.png`.
+The root `.pkgmeta` packages the addon as `SpellMeter` with only the four runtime files from `SpellMeter.toc`. It excludes repository documentation, project artwork, tests, unit fixtures, and local scripts. `CHANGELOG.md` is the Markdown manual changelog; no external libraries are bundled. The CurseForge icon is a stylized DPS-bar graphic at `assets/curseforge-logo.png`; it is excluded from the addon archive.
 
 ## License
 
@@ -50,7 +50,7 @@ SpellMeter is available under the [MIT License](LICENSE).
 
 ## CurseForge publication status
 
-The CurseForge project is `1651789` under `ossoleil`, with MIT licensing and third-party distribution enabled. Its source points to `Osso/SpellMeter`, automatic packaging is limited to tagged commits, and GitHub push webhook `665556362` is active with redacted query parameters. Tag `0.1.0` produced verified file `8644762` for Retail `12.0.7`; its four runtime files match source. The file is under review, so moderation and public approval remain pending.
+The CurseForge project is `1651789` under `ossoleil`, with MIT licensing and third-party distribution enabled. Its source points to `Osso/SpellMeter`, automatic packaging is limited to tagged commits, and GitHub push webhook `665556362` is active with redacted query parameters. Tag `0.1.0` produced verified file `8644762` for Retail `12.0.7`; its four runtime files match source. The project uses the DPS-bar icon and includes `SpellMeter-DPS.png` in its media gallery. The file is under review, so moderation and public approval remain pending.
 
 ## Development
 
