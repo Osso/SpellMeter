@@ -25,6 +25,8 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - `SpellMeterModel.lua` — mode and settings behavior.
 - `SpellMeterRows.lua` — secret-safe row binding.
 - `SpellMeter.toc` — Retail addon manifest.
+- `.pkgmeta` — CurseForge package name, runtime-file exclusions, manual changelog, and no-library package setting.
+- `CHANGELOG.md` — Markdown release notes for the published package.
 - `deploy.sh` — local AddOns installation.
 
 ## Tests asserting this spec
