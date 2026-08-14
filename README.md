@@ -42,7 +42,11 @@ Retail marks live combat-meter values and spell IDs secret during combat. SpellM
 
 ## CurseForge packaging
 
-The root `.pkgmeta` packages the addon as `SpellMeter` with only the four runtime files from `SpellMeter.toc`. It excludes repository documentation, tests, unit fixtures, and local scripts. `CHANGELOG.md` is the Markdown manual changelog; no external libraries are bundled.
+The root `.pkgmeta` packages the addon as `SpellMeter` with only the four runtime files from `SpellMeter.toc`. It excludes repository documentation, project artwork, tests, unit fixtures, and local scripts. `CHANGELOG.md` is the Markdown manual changelog; no external libraries are bundled. CurseForge project artwork lives at `assets/curseforge-logo.png`.
+
+## License
+
+SpellMeter is available under the [MIT License](LICENSE).
 
 ## Development
 
