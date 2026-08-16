@@ -29,13 +29,14 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - `CHANGELOG.md` — Markdown release notes for the published package.
 - `LICENSE` — MIT license for the project.
 - `assets/curseforge-logo.png` — stylized DPS-bar CurseForge icon, excluded from the addon archive.
-- `deploy.sh` — local AddOns installation.
+- `deploy.sh` — transfers the four runtime files over SSH to the active Retail AddOns directory.
 
 ## Tests asserting this spec
 
 - `unit/run.lua`
 - `tests/smoke.lua`
 - `tests/legacy_startup.lua`
+- `tests/deploy.sh`
 - `tests/fixtures/wtf/Account/SpellMeterRegression/SavedVariables/SpellMeter.lua` — committed legacy hidden-state fixture
 - `run-tests.sh`
 

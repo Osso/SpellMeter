@@ -28,13 +28,13 @@ Run:
 ./deploy.sh
 ```
 
-This installs the addon into:
+This transfers exactly the four runtime files over SSH host `alessio-desktop` into:
 
 ```text
-/syncthing/World of Warcraft/_retail_/Interface/AddOns/SpellMeter
+C:\World of Warcraft\_retail_\Interface\AddOns\SpellMeter
 ```
 
-Reload WoW with `/reload` after installation.
+The configured SSH host must be reachable. Reload WoW with `/reload` after installation.
 
 ## Limitations
 

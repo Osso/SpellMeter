@@ -4,6 +4,9 @@ set -eu
 project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 cd "$project_dir"
 
+sh -n deploy.sh tests/deploy.sh run-tests.sh
+sh tests/deploy.sh
+
 wow_sim_bin=${WOW_SIM_BIN:-"$project_dir/../wow-ui-sim/target/debug/wow-sim"}
 case "$wow_sim_bin" in
     /*) ;;
