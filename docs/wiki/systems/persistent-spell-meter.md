@@ -13,14 +13,13 @@ The root `.pkgmeta` packages the addon as `SpellMeter`, includes the four runtim
 ## CurseForge publication status
 
 - Upload API token: provisioned through the protected local credentials path; its value is not recorded here.
-- Project ID: `1651789`, created under `ossoleil`.
+- Project ID: `1651789` under `ossoleil`.
 - License: MIT.
 - Third-party distribution: enabled.
-- Source: public GitHub repository `Osso/SpellMeter`; automatic packaging is limited to tagged commits.
-- Release tag: `0.1.0` at commit `e609f02031d73021457aaa799e707ef0f44510fc`.
-- GitHub push packaging webhook: ID `665556362`, active; tag delivery succeeded; query parameters are intentionally redacted.
-- CurseForge builds `345260` and `345261` completed.
-- CurseForge file `8644762` is release `0.1.0` for game version `12.0.7` and is **Under Review**.
-- Downloaded package verification: `3,478` bytes, SHA-256 `2dd10ee561dd45143ebcfc7140bd3e6139679435d9878a48f0c63ef0163ef0fb`; exactly four runtime files, each byte-identical to source.
+- Source: public GitHub repository `Osso/SpellMeter`.
+- Version `0.1.1` was uploaded exactly once with `curseforge upload` through the documented Upload API.
+- Release file: `8665107`, release type `release`, game version `12.1.0`.
+- Release commit: `44a0dc9945ddf854705bd2eba145a73873c70b7c`.
+- No `0.1.1` Git tag or tag-packaging build was used.
+- Archive verification: `9,103` bytes, SHA-256 `7e623d44efb4cc32967e7ac5d323c4060dae303cb6f5a741bd12713e9f8dac85`; exactly four runtime files, each byte-identical to the release commit.
 - Project presentation uses the DPS-bar icon and includes `SpellMeter-DPS.png` in the media gallery.
-- Submission and package verification are complete. CurseForge moderation/public approval remains pending.

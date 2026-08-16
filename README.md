@@ -50,7 +50,7 @@ SpellMeter is available under the [MIT License](LICENSE).
 
 ## CurseForge publication status
 
-The CurseForge project is `1651789` under `ossoleil`, with MIT licensing and third-party distribution enabled. Its source points to `Osso/SpellMeter`, automatic packaging is limited to tagged commits, and GitHub push webhook `665556362` is active with redacted query parameters. Tag `0.1.0` produced verified file `8644762` for Retail `12.0.7`; its four runtime files match source. The project uses the DPS-bar icon and includes `SpellMeter-DPS.png` in its media gallery. The file is under review, so moderation and public approval remain pending.
+The CurseForge project is `1651789` under `ossoleil`, with MIT licensing and third-party distribution enabled. Its source points to `Osso/SpellMeter`; the GitHub push webhook `665556362` remains documented separately from the current direct upload. Version `0.1.1` was uploaded exactly once with `curseforge upload` through the documented Upload API, producing release file `8665107` for Retail `12.1.0` from commit `44a0dc9945ddf854705bd2eba145a73873c70b7c`. No `0.1.1` Git tag or tag-packaging build was used. The archive is 9,103 bytes with SHA-256 `7e623d44efb4cc32967e7ac5d323c4060dae303cb6f5a741bd12713e9f8dac85` and contains exactly the four runtime files, each byte-matching that commit. The project uses the DPS-bar icon and includes `SpellMeter-DPS.png` in its media gallery.
 
 ## Development
 
