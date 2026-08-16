@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.1.1
+
 - Hiding is session-only; reloading the UI or logging in restores the meter.
 
 ## 0.1.0

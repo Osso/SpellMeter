@@ -2,7 +2,7 @@
 ## Title: SpellMeter
 ## Notes: Persistent live per-spell DPS and HPS from Blizzard's Damage Meter
 ## Author: Alessio Deiana
-## Version: 0.1.0
+## Version: 0.1.1
 ## SavedVariables: SpellMeterDB
 
 SpellMeterModel.lua
