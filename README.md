@@ -31,7 +31,7 @@ Run:
 This installs the addon into:
 
 ```text
-/syncthing/Sync/Projects/wow/Interface/AddOns/SpellMeter
+/syncthing/World of Warcraft/_retail_/Interface/AddOns/SpellMeter
 ```
 
 Reload WoW with `/reload` after installation.

@@ -2,7 +2,7 @@
 set -eu
 
 project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-target=/syncthing/Sync/Projects/wow/Interface/AddOns/SpellMeter
+target=/syncthing/World of Warcraft/_retail_/Interface/AddOns/SpellMeter
 
 rm -rf "$target"
 mkdir -p "$target"
