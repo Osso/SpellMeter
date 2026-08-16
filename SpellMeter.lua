@@ -149,7 +149,6 @@ local function toggleMode()
 end
 
 local function setShown(shown)
-    settings.shown = shown
     meterFrame:SetShown(shown)
     if shown then
         refresh()
@@ -198,7 +197,7 @@ local function createWindow()
 
     meterFrame = frame
     updateHeader()
-    frame:SetShown(settings.shown)
+    frame:SetShown(true)
 end
 
 local eventFrame = CreateFrame("Frame")

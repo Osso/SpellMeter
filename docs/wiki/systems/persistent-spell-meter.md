@@ -4,7 +4,7 @@ SpellMeter requests the local player's current-session spell data from `C_Damage
 
 During combat, Blizzard marks returned values, including spell IDs, secret. `SpellMeterRows.lua` preserves API order, formats only the displayed per-second value to zero decimal places through `FontString:SetFormattedText`, and sends total amounts directly to `StatusBar` methods. The icon tooltip handler forwards `row.spellID` directly to `Tooltip:SetSpellByID`; it does not test, compare, convert, or otherwise inspect that secret ID. The addon never compares, sorts, or performs arithmetic on secret combat values.
 
-The window refreshes on `PLAYER_ENTERING_WORLD`, `DAMAGE_METER_CURRENT_SESSION_UPDATED`, `DAMAGE_METER_COMBAT_SESSION_UPDATED`, and `DAMAGE_METER_RESET`, so visible spell rows update during live combat as Blizzard publishes session changes. The mode button switches between DPS and HPS; dragging saves the anchor, and the close button or `/spellmeter` command controls visibility. Account-wide `SpellMeterDB` stores mode, visibility, and anchor coordinates.
+The window refreshes on `PLAYER_ENTERING_WORLD`, `DAMAGE_METER_CURRENT_SESSION_UPDATED`, `DAMAGE_METER_COMBAT_SESSION_UPDATED`, and `DAMAGE_METER_RESET`, so visible spell rows update during live combat as Blizzard publishes session changes. The mode button switches between DPS and HPS; dragging saves the anchor, and the close button or `/spellmeter` command hides or shows the window during the current UI session. Visibility is not saved: every reload or login starts visible, including when legacy `SpellMeterDB.shown = false` exists. Account-wide `SpellMeterDB` stores mode and anchor coordinates.
 
 ## CurseForge packaging
 

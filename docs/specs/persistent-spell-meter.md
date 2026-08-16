@@ -10,9 +10,9 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 - [x] Display each per-second DPS/HPS value rounded to zero decimal places.
 - [x] Render each spell icon above its meter bar without desaturation.
 - [x] Show the matching spell tooltip while hovering an icon and hide it when leaving.
-- [x] Preserve valid saved mode, position, and visibility settings while replacing invalid values.
+- [x] Preserve valid saved mode and position settings while replacing invalid values.
 - [x] Refresh the visible window from current-player combat-session updates.
-- [ ] Remain visible until the user closes or toggles it.
+- [x] Start visible on every reload or login, including when legacy `SpellMeterDB.shown = false` exists; keep close-button and `/spellmeter` hide/show behavior session-only.
 - [ ] Restore its saved screen position after reload.
 
 ## How it works
@@ -35,6 +35,8 @@ SpellMeter provides a persistent player spell breakdown for World of Warcraft Re
 
 - `unit/run.lua`
 - `tests/smoke.lua`
+- `tests/legacy_startup.lua`
+- `tests/fixtures/wtf/Account/SpellMeterRegression/SavedVariables/SpellMeter.lua` — committed legacy hidden-state fixture
 - `run-tests.sh`
 
 ## CurseForge publication status

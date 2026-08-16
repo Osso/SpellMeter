@@ -9,7 +9,7 @@ SpellMeter keeps World of Warcraft Retail's live per-spell DPS or HPS breakdown 
 - Hovering an icon shows its matching spell tooltip; leaving hides the tooltip
 - DPS/HPS mode switch
 - Blizzard-provided per-second values refreshed during live combat updates
-- Saved window position, visibility, and selected mode
+- Saved window position and selected mode; session-only visibility
 - `/spellmeter` toggles the window
 
 ## Use
@@ -17,7 +17,7 @@ SpellMeter keeps World of Warcraft Retail's live per-spell DPS or HPS breakdown 
 - Drag the window to move it; its position is saved.
 - Click the mode button to switch between DPS and HPS.
 - Hover a spell icon to show its matching spell tooltip; move away to hide it.
-- Click the close button or run `/spellmeter` to hide it; run `/spellmeter` again to show it.
+- Click the close button or run `/spellmeter` to hide or show it during the current UI session. Visibility is not saved: every reload or login starts visible, including with legacy `SpellMeterDB.shown = false`; mode and position remain saved.
 - The window displays up to ten spell rows in Blizzard's order.
 
 ## Install
@@ -57,3 +57,5 @@ The CurseForge project is `1651789` under `ossoleil`, with MIT licensing and thi
 ```sh
 ./run-tests.sh
 ```
+
+This runs unit, Lua syntax, and wow-sim behavioral tests against an isolated committed legacy SavedVariables fixture. It defaults to `../wow-ui-sim/target/debug/wow-sim`; set `WOW_SIM_BIN` for an explicit override. It never reads or writes live WoW state.

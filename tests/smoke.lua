@@ -12,23 +12,61 @@ local function firstSpellRow()
     return spellRows()[1]
 end
 
-test("persistent meter window loads", function()
+local function closeButton()
+    for _, child in ipairs({ SpellMeterFrame:GetChildren() }) do
+        if child:GetObjectType() == "Button" and child:GetWidth() == 24 and child:GetHeight() == 24 then
+            return child
+        end
+    end
+    return nil
+end
+
+test("persistent meter window loads visible with its saved mode", function()
     assertNotNil(SpellMeterFrame)
     assertTrue(SpellMeterFrame:IsShown())
-    assertEquals("Spell DPS", SpellMeterFrame.title:GetText())
+    if SpellMeterDB.mode == "healing" then
+        assertEquals("Spell HPS", SpellMeterFrame.title:GetText())
+        assertEquals("DPS", SpellMeterFrame.modeButton:GetText())
+    else
+        assertEquals("Spell DPS", SpellMeterFrame.title:GetText())
+        assertEquals("HPS", SpellMeterFrame.modeButton:GetText())
+    end
 end)
 
-test("mode button switches the persistent window to HPS", function()
+test("mode button switches the persistent window to the opposite mode", function()
+    local wasHealing = SpellMeterDB.mode == "healing"
     SpellMeterFrame.modeButton:Click()
-    assertEquals("Spell HPS", SpellMeterFrame.title:GetText())
-    assertEquals("DPS", SpellMeterFrame.modeButton:GetText())
+    if wasHealing then
+        assertEquals("Spell DPS", SpellMeterFrame.title:GetText())
+        assertEquals("HPS", SpellMeterFrame.modeButton:GetText())
+    else
+        assertEquals("Spell HPS", SpellMeterFrame.title:GetText())
+        assertEquals("DPS", SpellMeterFrame.modeButton:GetText())
+    end
 end)
 
-test("slash command hides and restores the persistent window", function()
+test("slash command hides and restores the persistent window without saving visibility", function()
     SlashCmdList.SPELLMETER()
     assertFalse(SpellMeterFrame:IsShown())
+    assertNil(SpellMeterDB.shown)
     SlashCmdList.SPELLMETER()
     assertTrue(SpellMeterFrame:IsShown())
+    assertNil(SpellMeterDB.shown)
+end)
+
+test("close button hides only in-session and slash command restores it", function()
+    local button = closeButton()
+    assertNotNil(button)
+    assertTrue(SpellMeterFrame:IsShown())
+    assertNil(SpellMeterDB.shown)
+
+    button:Click()
+    assertFalse(SpellMeterFrame:IsShown())
+    assertNil(SpellMeterDB.shown)
+
+    SlashCmdList.SPELLMETER()
+    assertTrue(SpellMeterFrame:IsShown())
+    assertNil(SpellMeterDB.shown)
 end)
 
 test("spell labels render above their status bars", function()
